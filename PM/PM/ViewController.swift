@@ -10,9 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let dateFormatter = DateFormatter(dateFormat: "yyyy/MM/dd")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let date = Date()
+        let lastDateOfTheMonth = date.endOfMonth
+        let lastDateOfTheMonthStr = dateFormatter.string(from: lastDateOfTheMonth)
+        print("End of the month is \(lastDateOfTheMonthStr)")
     }
 
 
